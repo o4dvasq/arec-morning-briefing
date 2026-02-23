@@ -1,0 +1,24 @@
+briefing:
+  delivery_time: "05:00"
+  timezone: "America/Los_Angeles"
+  calendar_days_ahead: 1
+  email_scan_hours: 18
+  email_max_results: 15
+
+memory:
+  base_path: "~/Dropbox/Tech/ClaudeProductivity"
+  files:
+    tasks: "TASKS.md"
+    inbox: "inbox.md"
+    fund_ii: "memory/projects/arec-fund-ii.md"
+    company: "memory/context/company.md"
+    glossary: "memory/glossary.md"
+    claude_context: "CLAUDE.md"
+  people_dir: "memory/people"
+
+delivery:
+  platform: "slack"
+
+logging:
+  path: "~/Library/Logs/arec-morning-briefing.log"
+  level: "INFO"

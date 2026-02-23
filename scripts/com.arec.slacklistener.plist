@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.arec.slacklistener</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/usr/bin/python3</string>
+        <string>PROJECT_DIR_PLACEHOLDER/delivery/slack_listener.py</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>PROJECT_DIR_PLACEHOLDER</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/usr/local/bin:/usr/bin:/bin</string>
+        <key>PYTHONPATH</key>
+        <string>PROJECT_DIR_PLACEHOLDER</string>
+        <key>PORT</key>
+        <string>3000</string>
+    </dict>
+
+    <key>StandardOutPath</key>
+    <string>/Users/oscar/Library/Logs/arec-slack-listener.log</string>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/oscar/Library/Logs/arec-slack-listener-error.log</string>
+
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>KeepAlive</key>
+    <true/>
+</dict>
+</plist>
