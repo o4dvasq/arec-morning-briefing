@@ -39,9 +39,9 @@ bash scripts/setup.sh
 7. Grant admin consent for your organization
 8. Add both Client ID and Tenant ID to .env
 
-## Slack Feedback Setup (Optional)
+## Slack AI Assistant (Optional)
 
-Enable two-way feedback: DM the AREC Briefing bot and it writes to inbox.md automatically.
+Enable a full Claude-powered assistant: DM the AREC Briefing bot to add tasks, update memory files, or ask questions about your work context. The assistant has access to all your memory files and maintains conversation history.
 
 ### Prerequisites
 ```bash
@@ -75,10 +75,24 @@ brew install ngrok
    - Add scope: `im:history`
    - Reinstall the app to your workspace
 
-5. **Test it**
-   - DM the AREC Briefing bot in Slack: "Test feedback message"
-   - Check ~/Dropbox/Tech/ClaudeProductivity/inbox.md
-   - You should see: `- [BRIEFING FEEDBACK 2026-02-23]: Test feedback message`
+5. **Test the assistant**
+   ```
+   You: "Add a task to follow up with Tony about Fund II"
+   Bot: "Added task to *Work — Operations*: Follow up with Tony about Fund II ✓ Done"
+
+   You: "What tasks do I have for Fund II?"
+   Bot: [Shows relevant tasks from TASKS.md]
+
+   You: "Note for Tony: discussed Q2 fundraising timeline"
+   Bot: [Updates memory/people/tony-avila.md with timestamped note] "✓ Done"
+   ```
+
+   The assistant can:
+   - Add tasks to TASKS.md (specify category or it defaults to Work — Operations)
+   - Update memory files with timestamped notes about people, projects, or deals
+   - Answer questions using your full memory context
+   - Log all interactions to inbox.md
+   - Maintain conversation history (last 10 exchanges)
 
 6. **Install as a persistent service (optional)**
    ```bash
